@@ -1,5 +1,5 @@
 {
-  "name": "@a-s-o/tcomb",
+  "name": "@aso/tcomb",
   "version": "1.0.0",
   "description": "Some helper mixins on top of tcomb-validation",
   "main": "index.js",
