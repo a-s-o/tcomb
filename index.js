@@ -6,7 +6,7 @@ const Type = t.irreducible('Type', t.isType);
 
 function test (value, type) {
    const result = t.validate(value, type);
-   if (!result.isValid()) t.fail(result.firstError());
+   if (!result.isValid()) t.fail(result.firstError().message);
 }
 
 function typedFunc (obj) {
