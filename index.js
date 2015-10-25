@@ -2,7 +2,14 @@
 
 const t = require('tcomb-validation');
 
+// Additional types
+
 const Type = t.irreducible('Type', t.isType);
+const Promise = t.irreducible('Promise', function isPromise (x) {
+   return (t.Nil.is(x) === false) && t.Func.is(x.then); 
+});
+
+// Misc helpers
 
 function typedFunc (obj) {
    return t.func(obj.inputs || [], obj.outputs || t.Any).of(obj.fn);
@@ -32,6 +39,7 @@ testFunc.not = typedFunc({
 
 module.exports = t.mixin(t, {
    Type,
+   Promise,
 
    test: testFunc,
    typedFunc: typedFunc({
