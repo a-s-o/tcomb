@@ -1,0 +1,22 @@
+{
+  "name": "tcomb",
+  "version": "1.0.0",
+  "description": "Some helper mixins on top of tcomb-validation",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/a-s-o/tcomb.git"
+  },
+  "author": "Amandeep",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/a-s-o/tcomb/issues"
+  },
+  "homepage": "https://github.com/a-s-o/tcomb#readme",
+  "dependencies": {
+    "tcomb-validation": "^2.2.0"
+  }
+}
