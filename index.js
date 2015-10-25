@@ -12,7 +12,7 @@ const Promise = t.irreducible('Promise', function isPromise (x) {
 // Misc helpers
 
 function typedFunc (obj) {
-   return t.func(obj.inputs || [], obj.outputs || t.Any).of(obj.fn);
+   return t.func(obj.inputs || [], obj.output || t.Any).of(obj.fn);
 }
 
 // Testing helpers
