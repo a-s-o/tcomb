@@ -2,7 +2,7 @@
 
 const t = require('tcomb-validation');
 
-const TcombType = t.irreducible(t.isType, 'TcombType');
+const Type = t.irreducible('Type', t.isType);
 
 function test (value, type) {
    const result = t.validate(value, type);
@@ -14,16 +14,16 @@ function typedFunc (obj) {
 }
 
 module.exports = t.mixin(t, {
-   TcombType,
+   Type,
 
    test: typedFunc({
-      inputs: [t.Any, TcombType],
+      inputs: [t.Any, Type],
       fn: test
    }),
    typedFunc: typedFunc({
       inputs: [t.struct({
          inputs: t.maybe(t.Array),
-         output: t.maybe(TcombType),
+         output: t.maybe(Type),
          fn: t.Function
       })],
       output: t.Function,
